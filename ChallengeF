@@ -1,0 +1,30 @@
+num = 22
+use_synth :piano
+
+87.times do
+  play(num)
+  sleep 0.25
+  num = num + 1
+end
+
+down = 108
+
+87.times do
+  play(down)
+  sleep 0.25
+  down = down - 1
+end
+
+number = 22
+87.times do
+  play(number)
+  sleep 0.125
+  number = number + 1
+end
+
+dow = 108
+87.times do
+  play(dow)
+  sleep 0.125
+  dow = dow - 1
+end
