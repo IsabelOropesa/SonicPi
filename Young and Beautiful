@@ -1,0 +1,43 @@
+#Young and Beautiful by Lana Del Ray
+
+use_bpm 114
+use_synth :piano
+
+1.times do
+  play :g2, release: 4
+  play :d2, release: 4
+  play :g3, release: 4
+end
+
+1.times do
+  play :a2, release: 4
+  play :e3, release: 4
+  play :a3, release: 4
+end
+
+1.times do
+  play :b2, release: 4
+  play :fs3, release: 4
+  play :b3, release: 4
+end
+
+1.times do
+  play :d2, release: 4
+  play :a2, release: 4
+  play :d3, release: 4
+end
+
+live_loop :piano1 do
+  2.times do
+    play :e4
+    sleep 0.5
+    play :d4
+    sleep 0.5
+    play :e4
+    sleep 0.5
+    play :d4
+    sleep 0.5
+    play :d4
+    sleep 0.5
+  end
+end
