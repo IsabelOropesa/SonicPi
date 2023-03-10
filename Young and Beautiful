@@ -96,27 +96,46 @@ end
 end
 
 1.times do
-  play: e4
+  play: :e4
   sleep 0.5
-  play d4
+  play :d4
   sleep 1.5
 end
 
 1. times play
-  play:f3#
+  play :f3#
   sleep 0.5
-  play:b4
+  play :b4
   sleep 0.5
-  play:f5#
+  play :f5#
   sleep 0.5
-  play:b4
+  play :b4
   play 0.5
-  play:
+  play :d5
   sleep 0.5
-  play:
+  play :b4
   sleep 0.5
-  play:
+  play :f5#
   sleep 0.5
-  play:
+  play :b4
   sleep 0.5
+end
+
+1. times do
+  play :f5#
+  sleep 0.5
+  play :a4
+  sleep 0.5
+  play :d5
+  sleep 0.5
+  play :a4
+  sleep 0.5
+  play :f5#
+  sleep 0.5
+  play :d5
+  sleep 0.5
+  play :a5
+  sleep 0.5
+  play :f5#
+ sleep 0.5
 end
