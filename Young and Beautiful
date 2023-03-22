@@ -2,7 +2,11 @@
 
 use_bpm 114
 use_synth :piano
-lana_humm = "C:/Users/Isabel Oropesa/Documents/Audacity/Lana Del Rey - Young And Beautiful vocals.wav" #not working yet
+lana_humm = "C:/Users/Isabel Oropesa/Documents/Audacity/Lana Del Rey - Young And Beautiful vocals.wav"
+
+2.times do
+  sample humm, amp: 1
+end
 
 2.times do
   play :e4
