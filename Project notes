@@ -1,0 +1,114 @@
+#bass notes
+  1.times do
+    play :g2, release: 4
+    play :d2, release: 4
+    play :g3, release: 4
+  end
+end
+
+1.times do
+  play :a2, release: 4
+  play :e3, release: 4
+  play :a3, release: 4
+end
+
+live_loop :bass3 do
+  1.times do
+    play :b2, release: 4
+    play :fs3, release: 4
+    play :b3, release: 4
+  end
+end
+
+live_loop :bass4 do
+  1.times do
+    play :d2, release: 4
+    play :a2, release: 4
+    play :d3, release: 4
+  end
+end
+
+#piano notes
+live_loop :piano1 do
+  1.times do
+    play :a4
+    sleep 0.5
+    play :d4
+    sleep 0.5
+    play :a4
+    sleep 0.5
+    play :e4
+    sleep 0.5
+    play :b4
+    sleep 0.5
+    play :fs4
+    play 0.5
+    play :a4
+    play 0.5
+    play :d5
+    sleep 0.5
+  end
+end
+
+live_loop :piano2 do
+  1.times do
+    play :cs5
+    sleep 0.5
+    play :a4
+    sleep 0.5
+    play :cs5
+    sleep 0.5
+    play :a4
+    sleep 0.5
+    play :d5
+    sleep 0.5
+    play :a4
+    play 0.5
+    play :e5
+    play 0.5
+    play :a4
+    sleep 0.5
+  end
+end
+
+live_loop :piano3 do
+  1. times do
+    play :fs3
+    sleep 0.5
+    play :b4
+    sleep 0.5
+    play :fs5
+    sleep 0.5
+    play :b4
+    play 0.5
+    play :d5
+    sleep 0.5
+    play :b4
+    sleep 0.5
+    play :fs5
+    sleep 0.5
+    play :b4
+    sleep 0.5
+  end
+end
+
+live_loop :piano2 do
+  1. times do
+    play :fs5
+    sleep 0.5
+    play :a4
+    sleep 0.5
+    play :d5
+    sleep 0.5
+    play :a4
+    sleep 0.5
+    play :fs5
+    sleep 0.5
+    play :d5
+    sleep 0.5
+    play :a5
+    sleep 0.5
+    play :fs5
+    sleep 0.5
+  end
+end
