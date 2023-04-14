@@ -1,44 +1,21 @@
 #Young and Beautiful by Lana Del Ray
 
 use_bpm 114
-use_synth :piano
-lana_humm = "C:/Users/Isabel Oropesa/Documents/Audacity/Lana Del Rey - Young And Beautiful vocals.wav"
+use_synth :sine
+humm = "C:/Users/Isabel Oropesa/Downloads/Young and Beautiful sonic pi recording.wav"
+notes = [:e4, :d4, :e4, :d4, :d4, :e4, :d4, :e4, :d4, :d4, :e4, :d4, :b3, :e4, :e4, :e4, :e4, :d4]
+sleep = [1, 1, 0.5, 0.35, 1, 1, 1, 0.5, 0.35, 1, 0.5, 0.5, 0.5, 0.50, 0.5, 0.5, 0.5, 1]
+x = 0
+y = 0
 
-2.times do
-  sample humm, amp: 1
-end
-
-2.times do
-  play :e4
-  sleep 1
-  play :d4
-  sleep 1
-  play :e4
-  sleep 0.5
-  play :d4
-  sleep 0.35
-  play :d4
-  sleep 1
-end
-
-1.times do
-  play :b2
-  sleep 0.45
-  play :d4
-  sleep 0.45
-  play :fs5
-  sleep 0.5
-  play :b3
-  sleep 0.5
-  play :e4
-  sleep 0.5
-  play :e4
-  sleep 0.5
-end
-
-1.times do
-  play :e4
-  sleep 0.5
-  play :d4, release: 2
-  sleep 1.5
+live_loop :song1 do
+  sample humm
+  18.times do
+    play notes[x]
+    sleep sleep[y]
+    x = x + 1
+    y = y + 1
+  end
+  x = 0
+  y = 0
 end
