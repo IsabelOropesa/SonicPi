@@ -7,16 +7,7 @@ sleeps = [0.5, 0.25, 0.5, 0.25, 0.5, 1, 0.20, 0.5, 0.25, 0.5, 0.5, 0.50, 0.50, 0
 x = 0
 y = 0
 
-live_loop :array do
-  14.times do
-    play notes[x]
-    sleep sleeps[y]
-    x = x + 1
-    y = y + 1
-  end
-  x = 0
-  y = 0
-  
+define :param_function do |n|
   play :e5
   sleep 0.5
   play :e5
@@ -39,7 +30,7 @@ live_loop :array do
   sleep 0.5
   play :f5
   sleep 0.5
-  play :e5
+  play n
   sleep 1
   play :e5
   sleep 0.50
@@ -85,4 +76,17 @@ live_loop :array do
   sleep 0.5
   play :c5
   sleep 0.5
+end
+
+live_loop :array do
+  14.times do
+    play notes[x]
+    sleep sleeps[y]
+    x = x + 1
+    y = y + 1
+  end
+  x = 0
+  y = 0
+  param_function :e5
+  param_function :c5
 end
