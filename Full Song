@@ -1,0 +1,105 @@
+#Full song set
+use_bpm 114
+use_synth :sine
+humm = "C:/Users/Isabel Oropesa/Downloads/Young and Beautiful sonic pi recording.wav"
+notes1 = [:e4, :d4, :e4, :d4, :d4, :e4, :d4, :e4, :d4, :d4, :e4, :d4, :b3, :e4, :e4, :e4, :e4, :d4]
+sleep1 = [1, 1, 0.5, 0.35, 1, 1, 1, 0.5, 0.35, 1, 0.5, 0.5, 0.5, 0.50, 0.5, 0.5, 0.5, 1]
+notes2 = [:c5, :c5, :g5, :f5, :g5, :g5, :c5, :c5, :c5, :c5, :g5, :f5, :g5, :f5]
+sleeps2 = [0.5, 0.25, 0.5, 0.25, 0.5, 1, 0.20, 0.5, 0.25, 0.5, 0.5, 0.50, 0.50, 0.50]
+x = 0
+y = 0
+a = 0
+b = 0
+define :param_function do |n|
+  play :e5
+  sleep 0.5
+  play :e5
+  sleep 0.5
+  play :c6
+  sleep 0.25
+  play :b5
+  sleep 0.25
+  play :g5
+  sleep 0.5
+  play :b5
+  sleep 0.5
+  play :b5
+  sleep 0.25
+  play :g5
+  sleep 0.25
+  play :f5
+  sleep 0.25
+  play :g5
+  sleep 0.5
+  play :f5
+  sleep 0.5
+  play n
+  sleep 1
+  play :e5
+  sleep 0.50
+  play :c6
+  sleep 0.25
+  play :b5
+  sleep 0.25
+  play :g5
+  sleep 0.25
+  play :b5
+  sleep 0.25
+  play :b5
+  sleep 0.25
+  play :g5
+  sleep 0.25
+  play :f5
+  sleep 0.25
+  play :g5
+  sleep 0.25
+  play :f5
+  sleep 0.5
+  play :e5
+  sleep 0.50
+  play :e5
+  sleep 1
+  play :c6
+  sleep 0.25
+  play :b5
+  sleep 0.25
+  play :g5
+  sleep 0.25
+  play :b5
+  sleep 0.25
+  play :b5
+  sleep 0.5
+  play :g5
+  sleep 0.25
+  play :f5
+  sleep 0.25
+  play :g5
+  sleep 0.5
+  play :f5
+  sleep 0.5
+  play :c5
+  sleep 0.5
+end
+
+
+live_loop :song1 do
+  sample humm
+  18.times do
+    play notes1[x]
+    sleep sleep1[y]
+    x = x + 1
+    y = y + 1
+  end
+  x = 0
+  y = 0
+  14.times do
+    play notes2[a]
+    sleep sleeps2[b]
+    a = a + 1
+    b = b + 1
+  end
+  a = 0
+  b = 0
+  param_function :e5
+  param_function :c5
+end
