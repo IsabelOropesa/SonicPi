@@ -2,14 +2,22 @@
 
 use_bpm 114
 use_synth :sine
-humm = "C:/Users/Isabel Oropesa/Downloads/Young and Beautiful sonic pi recording.wav"
+vocals = "C:/Users/Isabel Oropesa/Downloads/Lana Del Rey - Young And Beautiful vocals (1).wav"
+chatter = "C:/Users/Isabel Oropesa/Downloads/Crowd SOUND EFFECT - Talking Poeple Noise Ambience Chatter sound fx.wav"
+vocals2 = "C:/Users/Isabel Oropesa/Downloads/vocals 2.wav"
 notes = [:e4, :d4, :e4, :d4, :d4, :e4, :d4, :e4, :d4, :d4, :e4, :d4, :b3, :e4, :e4, :e4, :e4, :d4]
-sleep = [1, 1, 0.5, 0.35, 1, 1, 1, 0.5, 0.35, 1, 0.5, 0.5, 0.5, 0.50, 0.5, 0.5, 0.5, 1]
+sleep = [1, 1, 0.5, 0.35, 1, 1, 1, 0.5, 0.35, 1, 0.5, 0.5, 0.5, 0.50, 0.5, 0.5, 0.5, 1.5]
 x = 0
 y = 0
 
+sample chatter
+sleep 90
+
+sample vocals
+sleep 37
+
 live_loop :song1 do
-  sample humm
+  sample vocals2
   18.times do
     play notes[x]
     sleep sleep[y]
