@@ -1,11 +1,40 @@
-#Blood, Sweat, and Tears by BTS
+#blood, sweat, and tears
 use_bpm 93
 use_synth :sine
-
 notes = [:c5, :c5, :g5, :f5, :g5, :g5, :c5, :c5, :c5, :c5, :g5, :f5, :g5, :f5]
 sleeps = [0.5, 0.25, 0.5, 0.25, 0.5, 1, 0.20, 0.5, 0.25, 0.5, 0.5, 0.50, 0.50, 0.50]
 x = 0
 y = 0
+vocals1 = "C:/Users/Isabel Oropesa/Downloads/BTS Blood Sweat & Tears vocals.wav"
+applause = "C:/Users/Isabel Oropesa/Downloads/Applause Concert Hall Crowd Clapping Sound Effect.wav"
+
+sample applause, amp: 1
+sleep 1
+sample applause, amp: 2
+sleep 1
+sample applause, amp: 3
+sleep 1
+sample applause, amp: 4
+sleep 1
+sample applause, amp: 5
+sleep 1
+sample applause, amp: 5
+sleep 1
+sample applause, amp: 5
+sleep 1
+sample applause, amp: 4
+sleep 1
+sample applause, amp: 3
+sleep 1
+sample applause, amp: 2
+sleep 1
+sample applause, amp: 1
+sleep 1
+sample applause, amp: 0
+sleep 1
+
+sample vocals1
+sleep 10
 
 define :param_function do |n|
   play :e5
@@ -78,7 +107,7 @@ define :param_function do |n|
   sleep 0.5
 end
 
-live_loop :array do
+live_loop :song2 do
   14.times do
     play notes[x]
     sleep sleeps[y]
