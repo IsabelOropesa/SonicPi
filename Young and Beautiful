@@ -2,19 +2,19 @@
 
 use_bpm 114
 use_synth :sine
-vocals = "C:/Users/Isabel Oropesa/Downloads/Lana Del Rey - Young And Beautiful vocals (1).wav"
-chatter = "C:/Users/Isabel Oropesa/Downloads/Crowd SOUND EFFECT - Talking Poeple Noise Ambience Chatter sound fx.wav"
-vocals2 = "C:/Users/Isabel Oropesa/Downloads/vocals 2.wav"
+vocals = "C:/Users/isabe/Downloads/Lana Del Rey - Young And Beautiful (Studio Acapella)3.wav"
+chatter = "C:/Users/isabe/Downloads/Conference Chatter 3 Sound Effect.wav"
+vocals2 = "C:/Users/isabe/Downloads/Lana Del Rey - Young And Beautiful (Studio Acapella)4.wav"
 notes = [:e4, :d4, :e4, :d4, :d4, :e4, :d4, :e4, :d4, :d4, :e4, :d4, :b3, :e4, :e4, :e4, :e4, :d4]
 sleep = [1, 1, 0.5, 0.35, 1, 1, 1, 0.5, 0.35, 1, 0.5, 0.5, 0.5, 0.50, 0.5, 0.5, 0.5, 1.5]
 x = 0
 y = 0
 
 sample chatter
-sleep 90
+sleep 25
 
 sample vocals
-sleep 37
+sleep 90
 
 live_loop :song1 do
   sample vocals2
